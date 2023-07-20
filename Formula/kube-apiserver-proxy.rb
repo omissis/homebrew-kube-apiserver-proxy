@@ -5,20 +5,20 @@
 class KubeApiserverProxy < Formula
   desc "kube-apiserver-proxy binary"
   homepage "https://github.com/omissis/kube-apiserver-proxy"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.1.0/kube-apiserver-proxy-darwin-arm64.tar.gz"
-      sha256 "874a3585643b0c8eeff2e3c41a4a5014f77fb1e499eaa760dc9f73cb2d2c4a3d"
+      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.2.0/kube-apiserver-proxy-darwin-arm64.tar.gz"
+      sha256 "8b5baea5ce821355e1e8f0677810900e1466da8d5df89782a4d4d43fbf0b7532"
 
       def install
         bin.install 'kube-apiserver-proxy'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.1.0/kube-apiserver-proxy-darwin-amd64.tar.gz"
-      sha256 "bc787eeb8a92266166b1482fa905429900d80dfe2e4cf292178e957fb220513f"
+      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.2.0/kube-apiserver-proxy-darwin-amd64.tar.gz"
+      sha256 "dbaa342f94a1cba6ec636226f788b0a0966d3db94778da15093a7e9ec1100baf"
 
       def install
         bin.install 'kube-apiserver-proxy'
@@ -28,16 +28,16 @@ class KubeApiserverProxy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.1.0/kube-apiserver-proxy-linux-arm64.tar.gz"
-      sha256 "93d594e3f252847d33da1e93c8c4a6fd4e60359434924a7cebf4cff46c9a3732"
+      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.2.0/kube-apiserver-proxy-linux-arm64.tar.gz"
+      sha256 "e5eecef773987f1b4783ad98b25459e648c1964680d0366115d7119bafad6a87"
 
       def install
         bin.install 'kube-apiserver-proxy'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.1.0/kube-apiserver-proxy-linux-amd64.tar.gz"
-      sha256 "9724146ada0e4d1e317f15a840af06d45a76d414ac7b35266c3513ad52b52bb5"
+      url "https://github.com/omissis/kube-apiserver-proxy/releases/download/v0.2.0/kube-apiserver-proxy-linux-amd64.tar.gz"
+      sha256 "43ae252658e05077533a1264476316826c2afef3e51b5231a6f57c1091a2b1cf"
 
       def install
         bin.install 'kube-apiserver-proxy'
